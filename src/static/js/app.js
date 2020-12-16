@@ -12,6 +12,16 @@ function App() {
     );
 }
 
+function header(){
+    $.ajax({
+        url: "index.html",
+        cache: false,
+        success: function(html){
+            document.write(html);
+        }
+    });
+}
+
 function TodoListCard() {
     const [items, setItems] = React.useState(null);
 
